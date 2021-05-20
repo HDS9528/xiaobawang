@@ -1,0 +1,367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Hexo博客添加helper-live2d动态模型插件 | 小霸王</title><meta name="keywords" content="live2d"><meta name="author" content="黑皇,mailto:2487378907@qq.com.com"><meta name="copyright" content="黑皇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="helper-live2d动态模型插件,给hexo博客添加Live2d小人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客添加helper-live2d动态模型插件">
+<meta property="og:url" content="https://hds9528.github.io/xiaobawang/post/bcb1dd8f.html">
+<meta property="og:site_name" content="小霸王">
+<meta property="og:description" content="helper-live2d动态模型插件,给hexo博客添加Live2d小人">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png">
+<meta property="article:published_time" content="2021-04-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-25T00:20:05.712Z">
+<meta property="article:author" content="黑皇">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png"><link rel="shortcut icon" href="/xiaobawang/img/favicon.png"><link rel="canonical" href="https://hds9528.github.io/xiaobawang/post/bcb1dd8f"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/xiaobawang/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/xiaobawang/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 黑皇","link":"链接: ","source":"来源: 小霸王","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-25 08:20:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="/css/card_botui.css" /><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/xiaobawang/atom.xml" title="小霸王" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/xiaobawang/img/OIP.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/xiaobawang/">小霸王</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hexo博客添加helper-live2d动态模型插件</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-18T16:00:00.000Z" title="发表于 2021-04-19 00:00:00">2021-04-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-25T00:20:05.712Z" title="更新于 2021-04-25 08:20:05">2021-04-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>昨天看到别人的博客，看到他们在搞这个，还挺好看的，所以现在刚好有时间也折腾了一下</p>
+<h1 id="Tips-前导必备"><a href="#Tips-前导必备" class="headerlink" title="Tips:前导必备"></a>Tips:前导必备</h1><ul>
+<li>插件的github地址<a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/EYHN/hexo-helper-live2d">hexo-helper-live2d</a></li>
+<li><a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/xiazeyu/live2d-widget-models">live2d模型仓库</a></li>
+<li>现在假设你已经又一个使用<code>hexo</code>搭建的博客，然后我们安装模块</li>
+</ul>
+<h1 id="1、安装模块"><a href="#1、安装模块" class="headerlink" title="1、安装模块"></a>1、安装模块</h1><h4 id="在hexo根目录执行命令"><a href="#在hexo根目录执行命令" class="headerlink" title="在hexo根目录执行命令"></a><strong>在hexo根目录执行命令</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># npm install --save hexo-helper-live2d</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2、下载模型"><a href="#2、下载模型" class="headerlink" title="2、下载模型"></a>2、下载模型</h1><p>  作者各种模型包展示 ➡️ <a target="_blank" rel="noopener" href="https://huaji8.top/post/live2d-plugin-2.0/">hexo live2d插件 2.0 !</a></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/xiazeyu/live2d-widget-models">live2d模型仓库</a></p>
+</blockquote>
+<ul>
+<li><p><code>live2d-widget-model-chitose</code></p>
+</li>
+<li><p><code>live2d-widget-model-epsilon2_1</code></p>
+</li>
+<li><p><code>live2d-widget-model-gf</code></p>
+</li>
+<li><p><code>live2d-widget-model-haru/01</code>（使用<code>npm install --save live2d-widget-model-haru</code>)</p>
+</li>
+<li><p><code>live2d-widget-model-haru/02</code>（使用<code>npm install --save live2d-widget-model-haru</code>)</p>
+</li>
+<li><p><code>live2d-widget-model-haruto</code></p>
+</li>
+<li><p><code>live2d-widget-model-hibiki</code></p>
+</li>
+<li><p><code>live2d-widget-model-hijiki</code></p>
+</li>
+<li><p><code>live2d-widget-model-izumi</code></p>
+</li>
+<li><p><code>live2d-widget-model-koharu</code></p>
+</li>
+<li><p><code>live2d-widget-model-miku</code></p>
+</li>
+<li><p><code>live2d-widget-model-ni-j</code></p>
+</li>
+<li><p><code>live2d-widget-model-nico</code></p>
+</li>
+<li><p><code>live2d-widget-model-nietzsche</code></p>
+</li>
+<li><p><code>live2d-widget-model-nipsilon</code></p>
+</li>
+<li><p><code>live2d-widget-model-nito</code></p>
+</li>
+<li><p><code>live2d-widget-model-shizuku</code></p>
+</li>
+<li><p><code>live2d-widget-model-tororo</code></p>
+</li>
+<li><p><code>live2d-widget-model-tsumiki</code></p>
+</li>
+<li><p><code>live2d-widget-model-unitychan</code></p>
+</li>
+<li><p><code>live2d-widget-model-wanko</code></p>
+</li>
+<li><p><code>live2d-widget-model-z16</code></p>
+<h4 id="使用安装模型"><a href="#使用安装模型" class="headerlink" title="使用安装模型"></a>使用安装模型</h4></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---小编使用的模型</span><br><span class="line"><span class="comment"># npm install live2d-widget-model-koharu</span></span><br></pre></td></tr></table></figure>
+
+<p>安装后我们在<code>node_modules</code>目录下面找到<code>live2d-widget-model-koharu</code>这个文件夹，把这个文件夹复制下来 找到我们的<code>hexo</code>博客的根目录(因为我们是在根目录的<code>_config.yml</code>里添加配置)新建一个文件夹叫做<code>live2d_models</code>，把刚刚我们复制的文件粘贴过来，这样我们就完成了<code>99%</code>，最后我们打开添加的配置文件（第三步），找到这一行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">model:</span><br><span class="line">    use: live2d-widget  ## 模型文件</span><br></pre></td></tr></table></figure>
+
+<p>把<code>use</code>后面改成我们复制在<code>live2d_models</code>文件夹里面的模型目录名称，这样我们就完成了修改使用<code>hexo d || hexo deploy</code>来部署，然后清除一下浏览器缓存，打开后就可以发现我们添加的小人已经在屏幕右下角看着你了。</p>
+<h1 id="3、详细配置"><a href="#3、详细配置" class="headerlink" title="3、详细配置"></a>3、详细配置</h1><p>在Hexo的 <code>_config.yml</code> 文件中添加配置.</p>
+<p>参阅 <a target="_blank" rel="noopener" href="https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init">live2d-widget.js API</a></p>
+<ul>
+<li>小编配置文件示例</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Live2D</span></span><br><span class="line"><span class="comment">## https://github.com/EYHN/hexo-helper-live2d</span></span><br><span class="line"><span class="comment">## https://l2dwidget.js.org/docs/class/src/index.js~L2Dwidget.html#instance-method-init</span></span><br><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment">#enable: false</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span> <span class="comment"># 默认</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span> <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span> <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span> <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line">  <span class="comment"># scriptFrom: jsdelivr # jsdelivr CDN</span></span><br><span class="line">  <span class="comment"># scriptFrom: unpkg # unpkg CDN</span></span><br><span class="line">  <span class="comment"># scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span> <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line">  <span class="attr">debug:</span> <span class="literal">false</span> <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget-model-hibiki</span></span><br><span class="line">    <span class="comment"># use: live2d-widget-model-wanko # npm-module package name</span></span><br><span class="line">    <span class="comment"># use: wanko # 博客根目录/live2d_models/ 下的目录名</span></span><br><span class="line">    <span class="comment"># use: ./wives/wanko # 相对于博客根目录的路径</span></span><br><span class="line">    <span class="comment"># use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">145</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">315</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span> <span class="comment"># 是否在移动设备上显示</span></span><br><span class="line">    <span class="attr">scale:</span> <span class="number">0.5</span> <span class="comment"># 移动设备上的缩放</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacityDefault:</span> <span class="number">0.7</span></span><br><span class="line">    <span class="attr">opacityOnHover:</span> <span class="number">0.8</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果你觉上边比较复杂可以看下面都是一样的</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span>  <span class="comment"># 是否启动</span></span><br><span class="line">  <span class="attr">scriptFrom:</span> <span class="string">local</span> <span class="comment"># 默认</span></span><br><span class="line">  <span class="attr">pluginRootPath:</span> <span class="string">live2dw/</span>  <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line">  <span class="attr">pluginJsPath:</span> <span class="string">lib/</span>  <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line">  <span class="attr">pluginModelPath:</span> <span class="string">assets/</span>  <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line">  <span class="attr">tagMode:</span> <span class="literal">false</span>  <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line">  <span class="attr">debug:</span> <span class="literal">false</span>  <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line">  <span class="attr">model:</span></span><br><span class="line">    <span class="attr">use:</span> <span class="string">live2d-widget</span>  <span class="comment">## 模型文件</span></span><br><span class="line">  <span class="attr">display:</span></span><br><span class="line">    <span class="attr">position:</span> <span class="string">right</span> <span class="comment"># 定位方向 left right top bottom</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">150</span>  <span class="comment"># 小人宽度</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">300</span> <span class="comment">#  小人高度</span></span><br><span class="line">    <span class="attr">hOffset:</span> <span class="number">-15</span>  <span class="comment"># 向 偏移</span></span><br><span class="line">    <span class="attr">vOffset:</span> <span class="number">-15</span>  <span class="comment"># 像 偏移</span></span><br><span class="line">  <span class="attr">mobile:</span></span><br><span class="line">    <span class="attr">show:</span> <span class="literal">true</span>  <span class="comment"># 手机端是否显示</span></span><br><span class="line">  <span class="attr">react:</span></span><br><span class="line">    <span class="attr">opacity:</span> <span class="number">0.7</span>  <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="截图预览"><a href="#截图预览" class="headerlink" title="截图预览"></a>截图预览</h1><h2 id="haru"><a href="#haru" class="headerlink" title="haru"></a>haru</h2><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210419083837180.png" style="zoom:67%;" />
+
+<h2 id="shizuku"><a href="#shizuku" class="headerlink" title="shizuku"></a>shizuku</h2><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210419084429663.png" style="zoom: 67%;" />
+
+<h2 id="koharu"><a href="#koharu" class="headerlink" title="koharu"></a>koharu</h2><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210419084611591.png" style="zoom:67%;" />
+
+<h2 id="hijiki"><a href="#hijiki" class="headerlink" title="hijiki"></a>hijiki</h2><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210419084715017.png" style="zoom:67%;" />
+
+<h1 id="4、卸载"><a href="#4、卸载" class="headerlink" title="4、卸载"></a>4、卸载</h1><p>卸载插件和卸载模型的指令都是通过 npm 进行操作的。在博客根目录下打开终端，输入：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-helper-live2d #卸载模型插件</span><br><span class="line">npm uninstall live2d-widget-model-modelname #卸载模型。记得替换modelname为模型名称</span><br></pre></td></tr></table></figure>
+
+<p>卸载后为了保证配置项不出错，记得把 根目录下的配置文件<code>[Blog]\_config.yml</code> 里的配置项给注释或者删除掉。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:mailto:2487378907@qq.com.com">黑皇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hds9528.github.io/xiaobawang/post/bcb1dd8f.html">https://hds9528.github.io/xiaobawang/post/bcb1dd8f.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hds9528.github.io/xiaobawang" target="_blank">小霸王</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/xiaobawang/tags/%E6%95%99%E7%A8%8B/">教程</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/xiaobawang/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/xiaobawang/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/xiaobawang/post/9daba997.html"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">测试</div></div></a></div><div class="next-post pull-right"><a href="/xiaobawang/post/d2ebecef.html"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo引入阿里矢量图标库</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/xiaobawang/post/1a4ea2bd.html" title="Hexo博客butterfly主题图库的创建"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-21</div><div class="title">Hexo博客butterfly主题图库的创建</div></div></a></div><div><a href="/xiaobawang/post/95c7b2c6.html" title="hexo增加本地搜索功能"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-20</div><div class="title">hexo增加本地搜索功能</div></div></a></div><div><a href="/xiaobawang/post/53812541.html" title="修改系统hosts文件解决GitHub访问速度慢"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-21</div><div class="title">修改系统hosts文件解决GitHub访问速度慢</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tips-%E5%89%8D%E5%AF%BC%E5%BF%85%E5%A4%87"><span class="toc-text">Tips:前导必备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9D%97"><span class="toc-text">1、安装模块</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8hexo%E6%A0%B9%E7%9B%AE%E5%BD%95%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-text">在hexo根目录执行命令</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E4%B8%8B%E8%BD%BD%E6%A8%A1%E5%9E%8B"><span class="toc-text">2、下载模型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%AE%89%E8%A3%85%E6%A8%A1%E5%9E%8B"><span class="toc-text">使用安装模型</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE"><span class="toc-text">3、详细配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%AA%E5%9B%BE%E9%A2%84%E8%A7%88"><span class="toc-text">截图预览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#haru"><span class="toc-text">haru</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#shizuku"><span class="toc-text">shizuku</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#koharu"><span class="toc-text">koharu</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hijiki"><span class="toc-text">hijiki</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E5%8D%B8%E8%BD%BD"><span class="toc-text">4、卸载</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright"><span>&copy;2021</span><svg style="width:2em; height:1em" aria-hidden="true"><use xlink:href="#iconButterfly"></use></svg><span>黑皇</span></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="framework-into"></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://abchds.gitee.io/drawing-bed/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/xiaobawang/js/utils.js"></script><script src="/xiaobawang/js/main.js"></script><script src="/xiaobawang/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/xiaobawang/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/botui.js"></script><script data-pjax src="/js/botui_init.js"></script><div async class="aplayer no-destroy" data-id="5294179234" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="true" data-order="random" data-preload="auto" data-autoplay="true" data-mutex="flase" muted></div><script async src="//at.alicdn.com/t/font_2489793_cwzf3desb3s.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script><script async src="/js/ABC.js"></script><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '#web_bg',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><!-- hexo injector body_end end --></body></html>

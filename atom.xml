@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小霸王</title>
+  <icon>https://hds9528.github.io/xiaobawang/icon.png</icon>
+  
+  <link href="https://hds9528.github.io/xiaobawang/atom.xml" rel="self"/>
+  
+  <link href="https://hds9528.github.io/xiaobawang/"/>
+  <updated>2021-05-18T11:52:28.662Z</updated>
+  <id>https://hds9528.github.io/xiaobawang/</id>
+  
+  <author>
+    <name>黑皇</name>
+    <email>mailto:2487378907@qq.com.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>UEFI模式启动windows操作系统</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/e8a72c33.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/e8a72c33.html</id>
+    <published>2021-05-18T16:00:00.000Z</published>
+    <updated>2021-05-18T11:52:28.662Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="WIN10" scheme="https://hds9528.github.io/xiaobawang/categories/WIN10/"/>
+    
+    
+    <category term="WIN10" scheme="https://hds9528.github.io/xiaobawang/tags/WIN10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10系统还原点</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/3e5180fe.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/3e5180fe.html</id>
+    <published>2021-05-18T16:00:00.000Z</published>
+    <updated>2021-05-18T11:07:02.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="WIN10" scheme="https://hds9528.github.io/xiaobawang/categories/WIN10/"/>
+    
+    
+    <category term="系统" scheme="https://hds9528.github.io/xiaobawang/tags/%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用jsdelivr搭建视频床</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/25c2af4e.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/25c2af4e.html</id>
+    <published>2021-05-18T16:00:00.000Z</published>
+    <updated>2021-05-19T13:24:50.486Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://hds9528.github.io/xiaobawang/categories/hexo/"/>
+    
+    
+    <category term="hexo视频" scheme="https://hds9528.github.io/xiaobawang/tags/hexo%E8%A7%86%E9%A2%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册表详解</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/ad5de419.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/ad5de419.html</id>
+    <published>2021-05-18T16:00:00.000Z</published>
+    <updated>2021-05-18T11:07:02.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="WIN10" scheme="https://hds9528.github.io/xiaobawang/categories/WIN10/"/>
+    
+    
+    <category term="注册表" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux文件目录详解</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/2e8e30f4.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/2e8e30f4.html</id>
+    <published>2021-05-17T16:00:00.000Z</published>
+    <updated>2021-05-18T11:40:48.044Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="https://hds9528.github.io/xiaobawang/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="https://hds9528.github.io/xiaobawang/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux操作系统发展报告</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/3d98042.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/3d98042.html</id>
+    <published>2021-05-17T16:00:00.000Z</published>
+    <updated>2021-05-19T04:16:23.214Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://hds9528.github.io/xiaobawang/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://hds9528.github.io/xiaobawang/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于磁流式差速器设计</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/8e6f052f.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/8e6f052f.html</id>
+    <published>2021-05-17T16:00:00.000Z</published>
+    <updated>2021-05-18T10:52:10.444Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="课程设计" scheme="https://hds9528.github.io/xiaobawang/categories/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/"/>
+    
+    
+    <category term="设计" scheme="https://hds9528.github.io/xiaobawang/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>各类efi文件介绍</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/67649a66.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/67649a66.html</id>
+    <published>2021-05-16T16:00:00.000Z</published>
+    <updated>2021-05-18T11:40:48.054Z</updated>
+    
+    
+    <summary type="html">各类efi文件介绍</summary>
+    
+    
+    
+    <category term="WIN10" scheme="https://hds9528.github.io/xiaobawang/categories/WIN10/"/>
+    
+    
+    <category term="efi" scheme="https://hds9528.github.io/xiaobawang/tags/efi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://hds9528.github.io/xiaobawang/post/0.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/0.html</id>
+    <published>2021-05-12T03:32:09.810Z</published>
+    <updated>2021-05-19T04:16:23.190Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Typora+github-云笔记1.0版本</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/fd160a07.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/fd160a07.html</id>
+    <published>2021-05-10T16:00:00.000Z</published>
+    <updated>2021-05-12T03:37:41.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="知识" scheme="https://hds9528.github.io/xiaobawang/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="笔记" scheme="https://hds9528.github.io/xiaobawang/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客butterfly主题图库的创建</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/1a4ea2bd.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/1a4ea2bd.html</id>
+    <published>2021-04-20T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.712Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo博客butterfly主题美化" scheme="https://hds9528.github.io/xiaobawang/categories/Hexo%E5%8D%9A%E5%AE%A2butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改系统hosts文件解决GitHub访问速度慢</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/53812541.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/53812541.html</id>
+    <published>2021-04-20T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.734Z</updated>
+    
+    
+    <summary type="html">GitHub访问速度慢</summary>
+    
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="知识" scheme="https://hds9528.github.io/xiaobawang/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="GitHub" scheme="https://hds9528.github.io/xiaobawang/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的hexo博客美化之路</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/21a7606d.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/21a7606d.html</id>
+    <published>2021-04-20T16:00:00.000Z</published>
+    <updated>2021-05-18T06:15:08.920Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo博客butterfly主题美化" scheme="https://hds9528.github.io/xiaobawang/categories/Hexo%E5%8D%9A%E5%AE%A2butterfly%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/"/>
+    
+    
+    <category term="美化" scheme="https://hds9528.github.io/xiaobawang/tags/%E7%BE%8E%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git常用命令</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/caff8000.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/caff8000.html</id>
+    <published>2021-04-19T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.696Z</updated>
+    
+    
+    <summary type="html">Git常用命令</summary>
+    
+    
+    
+    <category term="知识" scheme="https://hds9528.github.io/xiaobawang/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="知识" scheme="https://hds9528.github.io/xiaobawang/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo增加本地搜索功能</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/95c7b2c6.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/95c7b2c6.html</id>
+    <published>2021-04-19T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.734Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo引入阿里矢量图标库</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/d2ebecef.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/d2ebecef.html</id>
+    <published>2021-04-19T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客添加helper-live2d动态模型插件</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/bcb1dd8f.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/bcb1dd8f.html</id>
+    <published>2021-04-18T16:00:00.000Z</published>
+    <updated>2021-04-25T00:20:05.712Z</updated>
+    
+    
+    <summary type="html">helper-live2d动态模型插件,给hexo博客添加Live2d小人</summary>
+    
+    
+    
+    
+    <category term="教程" scheme="https://hds9528.github.io/xiaobawang/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/9daba997.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/9daba997.html</id>
+    <published>2021-04-04T13:30:00.000Z</published>
+    <updated>2021-05-18T10:46:25.951Z</updated>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    
+    <category term="作为日记加密" scheme="https://hds9528.github.io/xiaobawang/tags/%E4%BD%9C%E4%B8%BA%E6%97%A5%E8%AE%B0%E5%8A%A0%E5%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo下Markdown的使用</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/ad9ef827.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/ad9ef827.html</id>
+    <published>2021-04-04T12:24:43.000Z</published>
+    <updated>2021-04-25T00:20:05.712Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>新手搭建博客教程</title>
+    <link href="https://hds9528.github.io/xiaobawang/post/6abebae1.html"/>
+    <id>https://hds9528.github.io/xiaobawang/post/6abebae1.html</id>
+    <published>2021-04-04T10:07:52.000Z</published>
+    <updated>2021-04-25T00:20:05.765Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

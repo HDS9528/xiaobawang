@@ -1,0 +1,276 @@
+
+.icon {                 
+  width: 1em; height: 1em;
+  /* width和height定义图标的默认宽度和高度*/
+  vertical-align: -0.2em;
+  fill: currentColor;
+  overflow: hidden;
+}                        /*图标  首页标题栏*/
+
+
+/* aplayer */         /*左下角音乐按钮收起*/
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+  left: -80px !important;                /* 默认情况下缩进左侧66px，只留一点箭头部分 */
+}
+
+.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+  left: 0px !important;                 /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
+}
+
+
+
+
+
+
+
+
+/*iconfont默认样式*/      #图标默认样式和振翅蝴蝶动画
+.icon {
+  width: 2m; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+  }
+/* 页脚蝴蝶振翅动画 */
+.copyright svg{
+  animation:iconButterfly 1s linear infinite alternate;
+}
+@keyframes iconButterfly {
+  from {
+    transform:rotateY(70deg);
+  }
+  to {
+    transform:rotateY(0deg);
+  }
+}
+
+/* 博主昵称颜色 */
+.author-info__name {
+  color: #0c10df;
+}
+
+
+/* 页脚透明 */
+
+#footer:before {
+  background-color: transparent !important;
+}
+
+
+
+
+
+
+
+/* 顶部导航栏文字颜色 */
+/*#nav a {
+  color: #3f2685;
+}*/
+
+
+/*页脚a标签字体颜色*/
+#footer-wrap a {
+  color: #e91159;
+}
+
+
+/*页脚自定义字段字体颜色*/
+/* 也就是配置文件里的footer_custom_text */
+.footer_custom_text {
+  color: #7c00c4;
+}
+
+
+/* 鼠标图标（全部注释掉了） */
+/*body {
+  cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/Jkll8I.png), auto;
+}
+/*按钮*/
+/*button:hover {
+  cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
+}
+#rightside>div>button,
+#rightside>div>a {
+  display: block;
+  margin-bottom: 2px;
+  width: 30px;
+  height: 30px;
+  color: var(--btn-color);
+  text-align: center;
+  font-size: 16px;
+  cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
+}
+/* 打赏 */
+/*.post-reward .reward-button {
+  cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
+}
+/* 文章标签 */
+/*.layout_post .tag_share .post-meta__tags {
+  cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
+}
+
+
+
+/* 滚动条 */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212383;
+  background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: rgb(83, 17, 17);
+  background-color: #e58a8a;
+}
+/*右边滚动条、底部滚动条、div内滚动条*/
+/* 滚动条宽度 */
+::-webkit-scrollbar{width: 7px;}
+/* 滚动条轨道颜色 */
+::-webkit-scrollbar-track{background-color: rgb(32, 2, 2);}
+/* 滚动条颜色 */
+/*::-webkit-scrollbar-thumb{background-color: #000;}
+/* 鼠标移动到滚动条上后显示的颜色 */
+::-webkit-scrollbar-thumb:hover {background-color: rgb(245, 10, 10)}
+/* 点击时滚动条的颜色 */
+::-webkit-scrollbar-thumb:active {background-color: rgb(87, 0, 226)}
+
+
+
+
+/* 打字效果渐变 */
+/*@-webkit-keyframes Gradient {
+  0% {
+      background-position: 0 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0 50%;
+  }
+}
+@-moz-keyframes Gradient {
+  0% {
+      background-position: 0 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0 50%;
+  }
+}
+@keyframes Gradient {
+  0% {
+      background-position: 0 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0 50%;
+  }
+}
+#subtitle {
+  background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#subtitle:before {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+
+
+/*background 属性的配置应该算是我们最期望的效果了，
+它只会使被添加了的该属性的页面元素背景变得透明，
+而不会对这一页面元素下的其他元素 (包括 div、span、p、a 等任何标签) 有任何影响。
+一般用来对文章内容或页面卡片添加透明度。这样可以保证字体不会变透明*/
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item{
+  background:rgba(255, 255, 255, 0.9);
+}
+/* 首页侧栏卡片 */
+.card-widget{
+background:rgba(255, 255, 255, 0.9)!important;
+}
+/* 文章页面正文背景 */
+div#post{
+background: rgba(255, 255, 255, 0.8);
+}
+/* 分页页面 */
+div#page{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 归档页面 */
+div#archive{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 标签页面 */
+div#tag{
+background: rgba(255, 255, 255, 0.9);
+}
+/* 分类页面 */
+div#category{
+background: rgba(255, 255, 255, 0.9);
+}
+
+
+
+/*底部实现不显示歌词*/
+.aplayer-lrc-contents
+  {display:none;}
+
+
+
+
+/*这一属性会让定义了该属性的页面元素背景变完全透明，
+但不会影响下属元素，
+效果等同于 background:rgba(255,255,255,0)。*/
+
+/* 页脚透明 */
+#footer{
+  background: transparent!important;
+}
+/* 头图透明 */
+#page-header{
+  background: transparent!important;
+}
+/*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
+#page-header.post-bg:before {
+  background-color: transparent!important;
+}
+/*夜间模式伪类遮罩层透明*/
+[data-theme="dark"]
+  #footer::before{
+      background: transparent!important;
+    }
+[data-theme="dark"]
+  #page-header::before{
+    background: transparent!important;
+    }

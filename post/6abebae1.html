@@ -1,0 +1,412 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>新手搭建博客教程 | 小霸王</title><meta name="author" content="黑皇,mailto:2487378907@qq.com.com"><meta name="copyright" content="黑皇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言经过了这几天的折腾，作为小白的我，也终于搭好了一个自己的个人博客（基于码云（Gitee）与Hexo的结合）。也无所谓它有没有人看吧…… 然后今天想着，趁着把之前的操作，或者纠结了许久的不确定，或者那些踩过的坑等等再整理一下，免得到时候忘了，又得去找教程。 一、所需的软件和平台各自的官网必须的软件：  node.js Git 或者 Git镜像站  可根据个人喜好替换的软件：  Visual St">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新手搭建博客教程">
+<meta property="og:url" content="https://hds9528.github.io/xiaobawang/post/6abebae1.html">
+<meta property="og:site_name" content="小霸王">
+<meta property="og:description" content="前言经过了这几天的折腾，作为小白的我，也终于搭好了一个自己的个人博客（基于码云（Gitee）与Hexo的结合）。也无所谓它有没有人看吧…… 然后今天想着，趁着把之前的操作，或者纠结了许久的不确定，或者那些踩过的坑等等再整理一下，免得到时候忘了，又得去找教程。 一、所需的软件和平台各自的官网必须的软件：  node.js Git 或者 Git镜像站  可根据个人喜好替换的软件：  Visual St">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg">
+<meta property="article:published_time" content="2021-04-04T10:07:52.000Z">
+<meta property="article:modified_time" content="2021-04-25T00:20:05.765Z">
+<meta property="article:author" content="黑皇">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg"><link rel="shortcut icon" href="/xiaobawang/img/favicon.png"><link rel="canonical" href="https://hds9528.github.io/xiaobawang/post/6abebae1"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/xiaobawang/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/xiaobawang/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 黑皇","link":"链接: ","source":"来源: 小霸王","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-04-25 08:20:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="/css/card_botui.css" /><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/xiaobawang/atom.xml" title="小霸王" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/xiaobawang/img/OIP.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/xiaobawang/">小霸王</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">新手搭建博客教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-04T10:07:52.000Z" title="发表于 2021-04-04 18:07:52">2021-04-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-25T00:20:05.765Z" title="更新于 2021-04-25 08:20:05">2021-04-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>经过了这几天的折腾，作为小白的我，也终于搭好了一个自己的个人博客（基于码云（Gitee）与Hexo的结合）。也无所谓它有没有人看吧……</p>
+<p>然后今天想着，趁着把之前的操作，或者纠结了许久的不确定，或者那些踩过的坑等等再整理一下，免得到时候忘了，又得去找教程。</p>
+<h1 id="一、所需的软件和平台"><a href="#一、所需的软件和平台" class="headerlink" title="一、所需的软件和平台"></a>一、所需的软件和平台</h1><h5 id="各自的官网"><a href="#各自的官网" class="headerlink" title="各自的官网"></a>各自的官网</h5><p>必须的软件：</p>
+<ul>
+<li><strong><a target="_blank" rel="noopener" href="http://nodejs.cn/download/">node.js</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></strong> 或者 <strong><a target="_blank" rel="noopener" href="https://npm.taobao.org/mirrors/git-for-windows/">Git镜像站</a></strong></li>
+</ul>
+<p>可根据个人喜好替换的软件：</p>
+<ul>
+<li><p><strong><a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">Visual Studio Code</a></strong></p>
+</li>
+<li><p><strong><a target="_blank" rel="noopener" href="https://www.typora.io/">Typora</a></strong></p>
+<p>要用到的框架或平台：</p>
+<ul>
+<li><strong><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://gitee.com/">码云（Gitee）</a></strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a>安装说明</h5><p>node.js和Typora就不说了，这个灰常简单。</p>
+<p>至于Git，它安装的时候选项挺多的，而且还都是洋文，看不懂的话就全部 next 就行了。你要是非得搞明白它每个选项的意思，emmmm你们自己去搜吧，网上有很多。</p>
+<p>VsCode安装好之后默认是英文界面，可以在插件市场里搜索chinese，然后安装之后重启软件，就是中文版了。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404181103706.png"></p>
+<h5 id="检验是否成功安装"><a href="#检验是否成功安装" class="headerlink" title="检验是否成功安装"></a>检验是否成功安装</h5><p>用 <strong>Win + R</strong> 打开运行，输入 <strong>cmd</strong> 并进入cmd</p>
+<p><strong>node.js</strong> 的检查</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+
+<p><strong>npm</strong> 的检查</p>
+<blockquote>
+<p>NPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p><strong>Git</strong> 的检查</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<p>以上有显示版本号，则说明安装成功</p>
+<h1 id="二、hexo博客模板"><a href="#二、hexo博客模板" class="headerlink" title="二、hexo博客模板"></a>二、hexo博客模板</h1><blockquote>
+<p>hexo中文官网：<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+</blockquote>
+<ol>
+<li><p>新建一个<code>MyWeb</code>目录，这个目录很重要，将来会存储你所有博客的markdown文件以及生成的html文件，慎重选择。</p>
+</li>
+<li><p>选中<code>MyWeb</code>目录，右键点击<code>Git Bsah Here</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404181403246.png"></p>
+</li>
+<li><p>安装hexo</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404182529871.png"></p>
+</li>
+</ol>
+<p>其中，目录<code>MyWeb\blog\source\_posts</code>下存放都为makedown（md）格式文件</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404182623782.png"></p>
+<p>常用hexo三句话：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean # 清空已有hexo网站文件</span><br><span class="line">hexo generate(or g) # 依据网页文本与新的CSS样式生成新网站文件</span><br><span class="line">hexo server(or s) # 启动本地服务器，可以在localhost:4000查看网站修改效果</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器输入<code>http://localhost:4000</code>就能查看演示样式helloworld页面：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404182856710.png"></p>
+<p>一般默认的是一个landscape主题，后期当提交新文章或者新的样式修改时，往往都是先从本地查看结果无误后再部署到Gitee Page。</p>
+<p>4.修改主题</p>
+<p>官网主题：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p>Sakura 非常炫，缺点加载慢 <a target="_blank" rel="noopener" href="https://github.com/honjun/hexo-theme-sakura">https://github.com/honjun/hexo-theme-sakura</a></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404183853426.png"></p>
+<p>进入github点击下载zip：<a target="_blank" rel="noopener" href="https://github.com/honjun/hexo-theme-sakura">https://github.com/honjun/hexo-theme-sakura</a><br>解压文件夹，将<code>hexo-theme-sakura-master\themes</code>中的主题样式复制<code>MyWeb\blog\themes</code>目录下（注意名字对应）：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404183607890.png"></p>
+<p>在<code>MyWeb\blog</code>主目录找到：<code>_config.yml</code>，记事本打开并修改默认</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404192105095.png"></p>
+<p>重新测试运行</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404183853426.png"></p>
+<p>细节修改参考：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/25f31fe6182a">sakura使用教程</a></p>
+<h1 id="三、码云配置"><a href="#三、码云配置" class="headerlink" title="三、码云配置"></a>三、码云配置</h1><ol>
+<li>申请码云账户，新建仓库<br>注意：<code>仓库名，公开访问权限，语言为JavaScript</code><br>第二步：这里仓库名cungudafa必须与你注册github或gitee的注册名cungudafa相同，不然css路径会读错</li>
+</ol>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404183808881.png"></p>
+<p>2.获得仓库地址：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404183941202.png"></p>
+<p>3.修改配置在<code>MyWeb\blog</code>主目录找到：<code>_config.yml</code>，记事本打开并修改默认</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184043431.png"></p>
+<p>其中repo后面为你的仓库地址，每个：后都有一个空格。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 你的项目地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>4.部署博客</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">hexo g --d  #一键部署</span><br></pre></td></tr></table></figure>
+
+<p>此时会弹出一个对话框，提示输入码云的账号密码。部署成功后，登陆码云。此时本地文件夹中出现有一个public文件夹，代表部署成功。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184246441.png"></p>
+<p>目前，查看码云中文件为：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184336007.png"></p>
+<p>本地多个public文件夹：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184424029.png"></p>
+<p>5.开启Page功能</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184505428.png"></p>
+<p>建议勾选</p>
+<p>部署成功后如图：网址为登录网址：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184630315.png"></p>
+<p>6.访问博客    <a target="_blank" rel="noopener" href="https://abchds.gitee.io/">https://abchds.gitee.io</a></p>
+<h1 id="四、博客使用"><a href="#四、博客使用" class="headerlink" title="四、博客使用"></a>四、博客使用</h1><p>1.在博客目录的source文件中的<code>_post</code>文件夹中添加你要写的博客文件，文件命名为<code>file_name.md</code><br>file_name.md的文件开头如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: file_name</span><br><span class="line">tag: 标签名</span><br><span class="line">categories: 分类</span><br><span class="line">comment: 是否允许评论(true or false)</span><br><span class="line">description: 描述</span><br><span class="line">---</span><br><span class="line">文档正文编写，请参照markdown语法。</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404185153761.png"></p>
+<p>2.按顺序运行以下代码</p>
+<h4 id="Hexo常用代码"><a href="#Hexo常用代码" class="headerlink" title="Hexo常用代码"></a>Hexo常用代码</h4><p>1、清理缓存</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo cl</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo cl 是 hexo clean 的简写</p>
+</blockquote>
+<p>2、生成静态页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo g 是 hexo generate 的简写</p>
+</blockquote>
+<p>3、在本地映射（预览）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo s 是 hexo server 的简写</p>
+</blockquote>
+<p>4、部署推送</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>hexo d 是 hexo deploy 的简写</p>
+</blockquote>
+<p>5.手动更新Gitee端<br>其实运行了hexo deploy(or d)应该就已经将新的网站文件（主要是网站目录下的public目录）上传到了Gitee，然而事实上上步之后直接访问网站URL会发现页面没有改变，原因在于：你、没有、更新！<br><a target="_blank" rel="noopener" href="https://gitee.com/ABCHDS/ABCHDS/pages">Pages · 2020/ABCHDS - Gitee.com</a>服务中选择更新：<br><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404185740944.png"></p>
+<p>是的，对于免费Gitee用户而言，你会需要手动更新一下Gitee Page，然后才可以将修改真的“部署”到可访问的网站上。</p>
+<p>再访问：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://gitee.com/ABCHDS/drawing-bed/raw/master/img/image-20210404184630315.png"></p>
+<p>就此大功告成！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:mailto:2487378907@qq.com.com">黑皇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hds9528.github.io/xiaobawang/post/6abebae1.html">https://hds9528.github.io/xiaobawang/post/6abebae1.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hds9528.github.io/xiaobawang" target="_blank">小霸王</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/xiaobawang/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/xiaobawang/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/xiaobawang/post/4ac06117.html"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">小站上线的第一天</div></div></a></div><div class="next-post pull-right"><a href="/xiaobawang/post/ad9ef827.html"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hexo下Markdown的使用</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%89%80%E9%9C%80%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%92%8C%E5%B9%B3%E5%8F%B0"><span class="toc-number"></span> <span class="toc-text">一、所需的软件和平台</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%90%84%E8%87%AA%E7%9A%84%E5%AE%98%E7%BD%91"><span class="toc-number">0.1.</span> <span class="toc-text">各自的官网</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E"><span class="toc-number">0.2.</span> <span class="toc-text">安装说明</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A3%80%E9%AA%8C%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85"><span class="toc-number">0.3.</span> <span class="toc-text">检验是否成功安装</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81hexo%E5%8D%9A%E5%AE%A2%E6%A8%A1%E6%9D%BF"><span class="toc-number"></span> <span class="toc-text">二、hexo博客模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%A0%81%E4%BA%91%E9%85%8D%E7%BD%AE"><span class="toc-number"></span> <span class="toc-text">三、码云配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8"><span class="toc-number"></span> <span class="toc-text">四、博客使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Hexo%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81"><span class="toc-number">1.</span> <span class="toc-text">Hexo常用代码</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright"><span>&copy;2021</span><svg style="width:2em; height:1em" aria-hidden="true"><use xlink:href="#iconButterfly"></use></svg><span>黑皇</span></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="framework-into"></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://abchds.gitee.io/drawing-bed/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/xiaobawang/js/utils.js"></script><script src="/xiaobawang/js/main.js"></script><script src="/xiaobawang/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/xiaobawang/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/botui.js"></script><script data-pjax src="/js/botui_init.js"></script><div async class="aplayer no-destroy" data-id="5294179234" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="true" data-order="random" data-preload="auto" data-autoplay="true" data-mutex="flase" muted></div><script async src="//at.alicdn.com/t/font_2489793_cwzf3desb3s.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script><script async src="/js/ABC.js"></script><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '#web_bg',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><!-- hexo injector body_end end --></body></html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Git常用命令 | 小霸王</title><meta name="keywords" content="Git常用命令"><meta name="author" content="黑皇,mailto:2487378907@qq.com.com"><meta name="copyright" content="黑皇"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Git常用命令">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git常用命令">
+<meta property="og:url" content="https://hds9528.github.io/xiaobawang/post/caff8000.html">
+<meta property="og:site_name" content="小霸王">
+<meta property="og:description" content="Git常用命令">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg">
+<meta property="article:published_time" content="2021-04-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-25T00:20:05.696Z">
+<meta property="article:author" content="黑皇">
+<meta property="article:tag" content="知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg"><link rel="shortcut icon" href="/xiaobawang/img/favicon.png"><link rel="canonical" href="https://hds9528.github.io/xiaobawang/post/caff8000"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/xiaobawang/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/xiaobawang/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"作者: 黑皇","link":"链接: ","source":"来源: 小霸王","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'mediumZoom',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: true,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-04-25 08:20:05'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><link rel="stylesheet" href="/css/card_botui.css" /><link rel="stylesheet" href="/css/custom.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/xiaobawang/atom.xml" title="小霸王" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/xiaobawang/img/OIP.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/xiaobawang/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/xiaobawang/">小霸王</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontianchongzhuye"></use></svg><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/xiaobawang/comments/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconliuyanban"></use></svg><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconwenzhang"></use></svg><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/tags/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbiaoqian-"></use></svg><span> 标签</span></a></li><li><a class="site-page child" href="/xiaobawang/categories/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconquanbu"></use></svg><span> 分类</span></a></li><li><a class="site-page child" href="/xiaobawang/archives/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconfuhao-shijianzhou"></use></svg><span> 时间轴</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 链接</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/PDF/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpdf"></use></svg><span> 电子书</span></a></li><li><a class="site-page child" href="/xiaobawang/link/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconicon-test"></use></svg><span> 友情链接</span></a></li><li><a class="site-page child" target="_blank" rel="noopener" href="https://abchds.gitee.io/navigation/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondaohang"></use></svg><span> 小霸王导航网</span></a></li><li><a class="site-page child" href="https://hds9528.github.io/Toolbox/"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongjuxiang"></use></svg><span> 小霸王工具箱</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyule"></use></svg><span> 娱乐</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/music/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyinle"></use></svg><span> 音乐</span></a></li><li><a class="site-page child" href="/xiaobawang/photo/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconxiangce"></use></svg><span> 相册</span></a></li><li><a class="site-page child" href="/xiaobawang/books/"><svg class="icon" aria-hidden="true"><use xlink:href="#icontushu"></use></svg><span> 书本</span></a></li><li><a class="site-page child" href="/xiaobawang/movies/"><svg class="icon" aria-hidden="true"><use xlink:href="#icondianying"></use></svg><span> 电影</span></a></li><li><a class="site-page child" href="/xiaobawang/games/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconyouxi"></use></svg><span> 游戏</span></a></li><li><a class="site-page child" href="/xiaobawang/bangumis/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg><span> 哔哩</span></a></li><li><a class="site-page child" href="/xiaobawang/air/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconkongtiao"></use></svg><span> 空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/xiaobawang/fcircle/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconpengyouquan"></use></svg><span> 朋友圈</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><svg class="icon" aria-hidden="true"><use xlink:href="#iconcaidan"></use></svg><span> 菜单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/xiaobawang/about/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconguanyu"></use></svg><span> 关于</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconzhutishezhi"></use></svg><span> 小霸王主题</span></a></li><li><a class="site-page child" href="/xiaobawang/"><svg class="icon" aria-hidden="true"><use xlink:href="#iconlvsefenkaicankaoxianban-"></use></svg><span> 小霸王个人主页</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git常用命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-19T16:00:00.000Z" title="发表于 2021-04-20 00:00:00">2021-04-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-04-25T00:20:05.696Z" title="更新于 2021-04-25 08:20:05">2021-04-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/xiaobawang/categories/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一、常用命令行<br>cd 文件夹路径    #进入到某个文件夹<br>cd ..           #返回上一层文件夹</p>
+<p>二、Git常用命令</p>
+<p>1.进入项目目录<br>cd 项目目录的路径      #进入项目目录</p>
+<p>2.初始化本地git仓库<br>git init    #初始化一个git仓库(repository)，初始化完成之后会在<br>            项目目录中自动创建一个.git隐藏文件夹，此文件夹是<br>            git的版本记录，用来跟踪或者管理git仓库</p>
+<p>3.查看版本库的状态<br>git status      #查看当前git仓库的状态<br>git status -s   #简单方式查看git仓库的状态</p>
+<p>4.把工作区的文件添加到暂存区<br>git add 文件名   #把没有添加到暂存区的文件添加到暂存区(文件名可写多个)<br>git add .       #把工作区没有添加到暂存区文件全部添加到暂存区(一次添加多个)</p>
+<p>5.把缓存区的文件提交到本地仓库<br>git commit -m 提交的备注信息  #把加入暂存区的文件提交到本地仓库<br>        commit 提交，-m表示给提交的内容添加描述信息，用来备注本次<br>        提交的信息。<br>        注意：提交的备注信息不能省略，写的要有意义<br>            （有的公司会作为工作内容的考核）</p>
+<p>6.查看版本库的历史操作记录<br>git log     #查看git操作的详细历史记录<br>    比如：<br>    commit b979bc1782e8f56750554323474da72ebca03553 #本次操作的版本号(commit id 版本号是唯一的)<br>    Author: jinxizhen <a href="mailto:&#56;&#x34;&#x32;&#49;&#x36;&#54;&#x32;&#57;&#x39;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;">&#56;&#x34;&#x32;&#49;&#x36;&#54;&#x32;&#57;&#x39;&#x40;&#x71;&#x71;&#46;&#x63;&#111;&#x6d;</a>                  #用户信息<br>    Date:   Thu Jan 19 11:40:55 2017 +0800          #提交的日期</p>
+<pre><code>    初始化了git仓库并创建index.txt                #提交的备注信息
+</code></pre>
+<p>git log –oneline   #把git操作日志简化为一行显示<br>git reflog          #查看操作命令及日志</p>
+<p>二、版本回退</p>
+<p>1.修改的内容还没有添加到暂存区<br>git checkout – 文件名     #撤销工作区最后一次修改的内容，<br>                           前提是修改的内容还没有添加到暂存区</p>
+<p>2.修改的内容已经添加到暂存区，但是还没有提交到本地仓库<br>先使用 git reset HEAD 文件名      #撤销添加到暂存区的内容<br>再使用 git checkout – 文件名     #回退到上一个状态</p>
+<p>3.修改的内容已经提交到了本地仓库<br>git reset –hard 版本号    #回退到指定的版本号的状态</p>
+<p>三、本地仓库和远程仓库的连接<br>1.从远程仓库克隆到本地<br>git clone <a target="_blank" rel="noopener" href="https://git.oschina.net/jinxizhen/H21weather.git">https://git.oschina.net/jinxizhen/H21weather.git</a>  #克隆项目，把远程库创建的好的(已经有的项目)项目同步到本地</p>
+<p>git pull    #同步远程库的文件到本地<br>git push    #同步本地的文件到远程库</p>
+<p>2.从工作目录连接远程库<br>git remote add origin <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x2e;&#111;&#115;&#99;&#104;&#105;&#110;&#97;&#46;&#110;&#x65;&#116;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x2e;&#111;&#115;&#99;&#104;&#105;&#110;&#97;&#46;&#110;&#x65;&#116;</a>:jinxizhen/H21rili.git #连接远程库</p>
+<p>先使用<br>git pull –rebase origin master #从远程库同步到本地<br>git push -u origin master       #把本地仓库的内容推送到远程库</p>
+<p>之后就是 git pull / git push  …</p>
+<p>四、添加公钥 sshkey </p>
+<p>1.ssh-keygen -t rsa -C “<a href="mailto:&#56;&#52;&#50;&#49;&#54;&#54;&#50;&#57;&#57;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;">&#56;&#52;&#50;&#49;&#54;&#54;&#50;&#57;&#57;&#64;&#x71;&#113;&#46;&#99;&#111;&#109;</a>“   #生成公钥（邮箱：注册码云的邮箱）<br>    生成公钥的步骤<br>    a.生成公钥时，会提示我们选择保存的路径，<br>    Generating public/private rsa key pair.<br>    Enter file in which to save the key (/c/Users/Jinxizhen/.ssh/id_rsa):<br>            路径使用默认的，直接回车</p>
+<pre><code>b.如果提示已经存在，可以直接覆盖掉
+/c/Users/Jinxizhen/.ssh/id_rsa already exists.
+Overwrite (y/n)?
+输入:y 然后回车 
+
+c.最后会提示输入密码
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+密码可以不用输入，直接回车，就可以生成公钥
+
+d.成功的提示
+Your identification has been saved in /c/Users/Jinxizhen/.ssh/id_rsa
+Your public key has been saved in /c/Users/Jinxizhen/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:g1VOz7OAJMSq49Vc1pSzvlDLsItX+JtiMGqRqJSaakQ 842166299@qq.com
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|     oo . o.     |
+|      .o =+o     |
+|     .  oooo+    |
+| E  .  o+ +. o   |
+|. .o +.oSB ..    |
+| ++ + = +.=      |
+|++ o o + = .     |
+|+.. o . = o.     |
+|+  .   o .o.     |
++----[SHA256]-----+
+</code></pre>
+<p>2.cat ~/.ssh/id_rsa.pub     #查看公钥<br>    比如输出：<br>    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC53lok+oPntpwg0E0p6z2Klxb7275YyWcWyxiQZk7sKL0J90xi1btvqd7MVEHH2UvuPluSKwyLVTQCmA1iWlqyRjuO4LBeY85feqkhKWi+haq5u9NEAcALS00vNH6URWS7Uz5gU1RIs3F9Ssd9V/VsWNJ28DVIGKYM2s8Vs0K1CQ3l0Ed0onlOsOb2vUa/5k8R64P8vS+EpV/1XsxH99cQK2tq8A6tyRBAGe406s/sNufV/EYvGcM9nQyz+QI/lxcoHCw0xc9kkezxk4X8uTxgwMBx5EkTmMzYxcr34jT+ltsMHULmaJPWoN4J55EdINY+9YzfpwqYABoQATjK0p8z <a href="mailto:&#56;&#x34;&#x32;&#49;&#54;&#54;&#x32;&#x39;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#56;&#x34;&#x32;&#49;&#54;&#54;&#x32;&#x39;&#x39;&#64;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>3.ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#101;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#x69;&#116;&#101;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>    #验证公钥是否添加成功，出现以下提示“successfully” 表示成功<br>    Hi 金西振 (DeployKey)! You’ve successfully authenticated, but GITEE.COM does not provide shell access.<br>    Note: Perhaps the current use is DeployKey.<br>    Note: DeployKey only supports pull/fetch operations</p>
+<p>五、分支操作</p>
+<p>git branch            #查看所有分支，当前的分之前会有一个*符号<br>git branch 分支名      #创建一个分支<br>git checkout 分支名    #切换到指定的分支</p>
+<p>git checkout -b 分支名 #创建一个分支，并切换到分支(相当于创建+切换)</p>
+<p>git merge 分支名       #合并指定分支的内容到当前分支<br>git log –graph       #查看分支合并信息<br>git branch -d 分支名   #删除分支</p>
+<p>六、.gitignore文件<br>.gitignore 用来添加不需要上传到远程库的文件<br>把文件名写在.gitignore文件内即可，以/结尾表示目录，否则表示单个文件</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:mailto:2487378907@qq.com.com">黑皇</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://hds9528.github.io/xiaobawang/post/caff8000.html">https://hds9528.github.io/xiaobawang/post/caff8000.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hds9528.github.io/xiaobawang" target="_blank">小霸王</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/xiaobawang/tags/%E7%9F%A5%E8%AF%86/">知识</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button button--animated"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/xiaobawang/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/xiaobawang/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/xiaobawang/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/xiaobawang/post/95c7b2c6.html"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">hexo增加本地搜索功能</div></div></a></div><div class="next-post pull-right"><a href="/xiaobawang/post/21a7606d.html"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/xiaobawang/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">我的hexo博客美化之路</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/xiaobawang/post/53812541.html" title="修改系统hosts文件解决GitHub访问速度慢"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-21</div><div class="title">修改系统hosts文件解决GitHub访问速度慢</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/xiaobawang/img/OIP.jpg" onerror="this.onerror=null;this.src='/xiaobawang/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">黑皇</div><div class="author-info__description">一个个人小网站</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/xiaobawang/archives/"><div class="headline">文章</div><div class="length-num">23</div></a></div><div class="card-info-data-item is-center"><a href="/xiaobawang/tags/"><div class="headline">标签</div><div class="length-num">14</div></a></div><div class="card-info-data-item is-center"><a href="/xiaobawang/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/ABCHDS/ABCHDS/raw/master/atom.xml"><i class="fas fa-broadcast-tower"></i><span>订阅</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/476902100" target="_blank" title="bilibili"><svg class="icon" aria-hidden="true"><use xlink:href="#iconbilibili"></use></svg></a><a class="social-icon" href="mailto:2487378907@qq.com.com" target="_blank" title="Email"><svg class="icon" aria-hidden="true"><use xlink:href="#iconnb-"></use></svg></a><a class="social-icon" href="https://abchds.gitee.io/drawing-bed/" target="_blank" title="公众号"><svg class="icon" aria-hidden="true"><use xlink:href="#icongongzhonghao2-copy"></use></svg></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=2487378907&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><svg class="icon" aria-hidden="true"><use xlink:href="#iconQQ"></use></svg></a><a class="social-icon" href="/xiaobawang/img/%E5%BE%AE%E4%BF%A1.jpg" target="_blank" title="微信"><svg class="icon" aria-hidden="true"><use xlink:href="#iconweixin"></use></svg></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><center>欢迎来到我的博客！</center> <center><img src="/img/图片合集/GIF.gif"></center></div></div><div class="sticky_layout"><div class="card-widget card-botui"><div class="card-content" style="height:320px;"><div class="item-headline"><i class="fas fa-comments"></i><span>聊天窗</span></div><div class="botui-app-container" id="hello-akilar" style="width:100%;padding:0.5px"><bot-ui><div class="facemain"><figure><div><span class="face">要来和我聊聊么？</span><span class="face"><a href="javascript:void(0);" onclick="botui_init()">欢迎小霸王</a></span></div></figure></div></bot-ui></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/xiaobawang/post/e8a72c33.html" title="UEFI模式启动windows操作系统"><img data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" onerror="this.onerror=null;this.src='/xiaobawang/img/404.jpg'" alt="UEFI模式启动windows操作系统"/></a><div class="content"><a class="title" href="/xiaobawang/post/e8a72c33.html" title="UEFI模式启动windows操作系统">UEFI模式启动windows操作系统</a><time datetime="2021-05-18T16:00:00.000Z" title="发表于 2021-05-19 00:00:00">2021-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/xiaobawang/post/3e5180fe.html" title="win10系统还原点"><img data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/灵笼/00680bX5gy1g6xrlzvfagj30u01hc7wh.jpg" onerror="this.onerror=null;this.src='/xiaobawang/img/404.jpg'" alt="win10系统还原点"/></a><div class="content"><a class="title" href="/xiaobawang/post/3e5180fe.html" title="win10系统还原点">win10系统还原点</a><time datetime="2021-05-18T16:00:00.000Z" title="发表于 2021-05-19 00:00:00">2021-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/xiaobawang/post/25c2af4e.html" title="利用jsdelivr搭建视频床"><img data-lazy-src="https://cdn.jsdelivr.net/gh/HDS9528/image@main/PC/封面相关/文章封面.jpg" onerror="this.onerror=null;this.src='/xiaobawang/img/404.jpg'" alt="利用jsdelivr搭建视频床"/></a><div class="content"><a class="title" href="/xiaobawang/post/25c2af4e.html" title="利用jsdelivr搭建视频床">利用jsdelivr搭建视频床</a><time datetime="2021-05-18T16:00:00.000Z" title="发表于 2021-05-19 00:00:00">2021-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/xiaobawang/post/ad5de419.html" title="注册表详解"><img data-lazy-src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/xiaobawang/img/404.jpg'" alt="注册表详解"/></a><div class="content"><a class="title" href="/xiaobawang/post/ad5de419.html" title="注册表详解">注册表详解</a><time datetime="2021-05-18T16:00:00.000Z" title="发表于 2021-05-19 00:00:00">2021-05-19</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright"><span>&copy;2021</span><svg style="width:2em; height:1em" aria-hidden="true"><use xlink:href="#iconButterfly"></use></svg><span>黑皇</span></div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="framework-into"></div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://abchds.gitee.io/drawing-bed/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/xiaobawang/js/utils.js"></script><script src="/xiaobawang/js/main.js"></script><script src="/xiaobawang/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="/xiaobawang/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/botui.js"></script><script data-pjax src="/js/botui_init.js"></script><div async class="aplayer no-destroy" data-id="5294179234" data-server="tencent" data-type="playlist" data-fixed="true" data-mini="true" data-listFolded="true" data-order="random" data-preload="auto" data-autoplay="true" data-mutex="flase" muted></div><script async src="//at.alicdn.com/t/font_2489793_cwzf3desb3s.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script><script async src="/js/ABC.js"></script><script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '#web_bg',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>function electric_clock_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-clock/clock/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>';
+                console.log('已挂载electric_clock')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            electric_clock_injector_config()
+        } </script><script src="https://pv.sohu.com/cityjson?ie=utf-8"></script><script data-pjax  src="https://cdn.jsdelivr.net/gh/Zfour/hexo-electric-clock@1.0.6/clock.js"></script><script data-pjax>function history_calendar_injector_config(){
+                var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+                var item_html = '<div class="card-widget card-history"><div class="card-content"><div class="item-headline"><i class="fas fa-clock fa-spin"></i><span>那年今日</span></div><div id="history-baidu" style="height: 100px;overflow: hidden"><div class="history_swiper-container" id="history-container" style="width: 100%;height: 100%"><div class="swiper-wrapper" id="history_container_wrapper" style="height:20px"></div></div></div></div>';
+                console.log('已挂载history_calendar')
+                // parent_div_git.innerHTML=item_html+parent_div_git.innerHTML // 无报错，但不影响使用(支持pjax跳转)
+                parent_div_git.insertAdjacentHTML("afterbegin",item_html) // 有报错，但不影响使用(支持pjax跳转)
+            }if( document.getElementsByClassName('sticky_layout')[0] && (location.pathname ==='all'|| 'all' ==='all')){
+
+            history_calendar_injector_config()
+        } </script><script data-pjax  src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script><script data-pjax src="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/js/main.js"></script><!-- hexo injector body_end end --></body></html>
